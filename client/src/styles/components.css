@@ -8,12 +8,26 @@
   animation: slideDown 0.25s ease;
 }
 
-.alert-success { background: var(--color-success-light); color: var(--color-success); }
-.alert-danger  { background: var(--color-danger-light);  color: var(--color-danger);  }
+.alert-success {
+  background: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.alert-danger {
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+}
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== Job Card ===== */
@@ -115,7 +129,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: linear-gradient(90deg, rgba(108,99,255,0.08) 0%, rgba(108,99,255,0.02) 100%);
+  background: linear-gradient(90deg, rgba(108, 99, 255, 0.08) 0%, rgba(108, 99, 255, 0.02) 100%);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -130,7 +144,10 @@
   letter-spacing: 0.9px;
 }
 
-.filters-title svg { color: var(--color-primary); opacity: 0.85; }
+.filters-title svg {
+  color: var(--color-primary);
+  opacity: 0.85;
+}
 
 .filters-clear-btn {
   background: transparent;
@@ -164,17 +181,29 @@
   .filters-form {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .filter-group--search { grid-column: 1 / -1; }
-  .filter-group--action { grid-column: 1 / -1; }
-  .filter-group--action .btn { width: 100%; }
+
+  .filter-group--search {
+    grid-column: 1 / -1;
+  }
+
+  .filter-group--action {
+    grid-column: 1 / -1;
+  }
+
+  .filter-group--action .btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 560px) {
   .filters-form {
     grid-template-columns: 1fr;
   }
+
   .filter-group--search,
-  .filter-group--action { grid-column: auto; }
+  .filter-group--action {
+    grid-column: auto;
+  }
 }
 
 /* ── Filter group base ── */
@@ -195,7 +224,9 @@
 }
 
 /* invisible spacer so the Search button aligns to bottom */
-.filter-label-spacer { visibility: hidden; }
+.filter-label-spacer {
+  visibility: hidden;
+}
 
 /* ── Input with icon ── */
 .input-icon-wrapper {
@@ -219,7 +250,7 @@
   color: var(--color-primary);
 }
 
-.input-icon-wrapper input {
+.filter-group .input-icon-wrapper input {
   padding-left: 36px;
 }
 
@@ -250,7 +281,10 @@
   background: var(--color-bg-2);
 }
 
-.filter-group input::placeholder { color: var(--color-text-dim); font-style: italic; }
+.filter-group input::placeholder {
+  color: var(--color-text-dim);
+  font-style: italic;
+}
 
 /* ── Select arrow ── */
 .filter-group select,
@@ -265,7 +299,9 @@
 }
 
 .filter-group select option,
-.form-group select option { background: var(--color-bg-2); }
+.form-group select option {
+  background: var(--color-bg-2);
+}
 
 /* ===== Pagination ===== */
 .pagination {
@@ -277,7 +313,10 @@
   flex-wrap: wrap;
 }
 
-.page-numbers { display: flex; gap: 6px; }
+.page-numbers {
+  display: flex;
+  gap: 6px;
+}
 
 .page-btn {
   width: 36px;
@@ -293,5 +332,13 @@
   transition: all var(--transition);
 }
 
-.page-btn:hover     { border-color: var(--color-primary); color: var(--color-primary); }
-.page-btn-active    { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.page-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.page-btn-active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
