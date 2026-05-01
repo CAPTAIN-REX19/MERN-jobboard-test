@@ -27,7 +27,7 @@ const AddJob = () => {
   useEffect(() => {
     if (!isEditing) clearValues();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isEditing]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

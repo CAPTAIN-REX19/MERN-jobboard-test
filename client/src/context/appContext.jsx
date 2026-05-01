@@ -169,7 +169,13 @@ const AppProvider = ({ children }) => {
         },
       });
     } catch (error) {
-      logoutUser();
+      if (error?.response?.status === 401) {
+        logoutUser();
+      } else {
+        const msg = error?.response?.data?.msg || 'Error fetching jobs';
+        displayAlert('danger', msg);
+        dispatch({ type: ACTIONS.SET_LOADING, payload: false });
+      }
     }
   };
 
